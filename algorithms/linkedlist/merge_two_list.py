@@ -6,6 +6,16 @@ For example:
 Input: 1->2->4, 1->3->4
 Output: 1->1->2->3->4->4
 """
+"""
+williamfzc:
+
+同时迭代两个链表：
+
+- 比较两边的大小
+- 符合要求的成为next
+- 直到一个链表结束
+- 将剩余项接到最后
+"""
 class Node:
 
     def __init__(self, x):

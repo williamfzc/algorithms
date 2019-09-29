@@ -4,11 +4,15 @@ Given a linked list, determine if it has a cycle in it.
 Follow up:
 Can you solve it without using extra space?
 """
+
+
+# williamfzc: 简单版本的 first_cyclic_node.py
 class Node:
 
     def __init__(self, x):
         self.val = x
         self.next = None
+
 
 def is_cyclic(head):
     """

@@ -14,6 +14,19 @@ return 4->5->1->2->3->NULL.
 #         self.next = None
 
 
+"""
+williamfzc:
+
+旋转链表
+
+- 遍历整个列表得到长度
+- 首尾连接（形成环）
+- 继续往前走 k
+- 断开链表
+
+当然用快慢指针也可以解
+"""
+
 def rotate_right(head, k):
     """
     :type head: ListNode

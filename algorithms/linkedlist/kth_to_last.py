@@ -1,4 +1,13 @@
-class Node():
+"""
+williamfzc；
+
+这道题如果只是用缓存（先转换成list、dict之类的）来做就没什么挑战了
+两种比较主流的方案：
+
+- 递归：暴力遍历到最后一个，然后反向找第k个
+- 双指针：两个指针，一个先向前移动k个单位，之后同时往前遍历。当快指针到达终点时，慢指针即为所求
+"""
+class Node:
     def __init__(self, val=None):
         self.val = val
         self.next = None
@@ -12,7 +21,7 @@ def kth_to_last_eval(head, k):
     if not isinstance(k, int) or not head.val:
         return False
 
-    nexts = '.'.join(['next' for n in range(1, k+1)])
+    nexts = '.'.join(['next' for n in range(1, k + 1)])
     seeker = str('.'.join(['head', nexts]))
 
     while head:
@@ -38,7 +47,7 @@ def kth_to_last_dict(head, k):
         d[count] = head
         head = head.next
         count += 1
-    return len(d)-k in d and d[len(d)-k]
+    return len(d) - k in d and d[len(d) - k]
 
 
 def kth_to_last(head, k):
@@ -51,7 +60,7 @@ def kth_to_last(head, k):
         return False
     p1 = head
     p2 = head
-    for i in range(1, k+1):
+    for i in range(1, k + 1):
         if p1 is None:
             # Went too far, k is not valid
             raise IndexError
@@ -115,6 +124,7 @@ def test():
         e.args += ("Expecting D, got %s" % kth.val,)
         raise
     print("all passed.")
+
 
 if __name__ == '__main__':
     test()

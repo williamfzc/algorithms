@@ -8,6 +8,7 @@ from collections import defaultdict
 
 
 class RandomListNode(object):
+    # williamfzc: 带了一个随机指针，这个指针可以为空，也可以指向链表的任意一个节点
     def __init__(self, label):
         self.label = label
         self.next = None
@@ -18,6 +19,15 @@ def copy_random_pointer_v1(head):
     """
     :type head: RandomListNode
     :rtype: RandomListNode
+    """
+
+    """
+    williamfzc:
+    
+    本质上是用字典来缓存所有节点。两次遍历：
+    
+    - 第一次建立所有节点，并建立一个源节点与新节点的 dict （可以从源节点key关联到新节点value）
+    - 第二次关联指针
     """
     dic = dict()
     m = n = head

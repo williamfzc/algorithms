@@ -25,7 +25,9 @@ def add_two_numbers(left: Node, right: Node) -> Node:
     current = head
     sum = 0
     while left or right:
+        # williamfzc: 需要分清楚 //= 与 % 的差别
         print("adding: ", left.val, right.val)
+        # williamfzc: 计算进位（上一位有多少个10）
         sum //= 10
         if left:
             sum += left.val
@@ -33,6 +35,7 @@ def add_two_numbers(left: Node, right: Node) -> Node:
         if right:
             sum += right.val
             right = right.next
+        # williamfzc: 只保留个位数
         current.next = Node(sum % 10)
         current = current.next
     if sum // 10 == 1:

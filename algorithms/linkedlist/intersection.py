@@ -9,6 +9,16 @@
    ...we would return 7.
    Note that the node itself is the unique identifier, not the value of the node.
    """
+"""
+williamfzc:
+
+因为如果两个链长度相同的话，那么对应的一个个比下去就能找到，所以只需要把长链表变短即可。
+具体算法为：
+
+- 分别遍历两个链表，得到分别对应的长度
+- 然后求长度的差值，把较长的那个链表向后移动这个差值的个数
+- 比较即可
+"""
 import unittest
 
 

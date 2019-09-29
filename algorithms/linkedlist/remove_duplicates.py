@@ -1,12 +1,20 @@
-class Node():
-    def __init__(self, val = None):
+class Node:
+    def __init__(self, val=None):
         self.val = val
         self.next = None
+
 
 def remove_dups(head):
     """
     Time Complexity: O(N)
     Space Complexity: O(N)
+    """
+
+    """
+    williamfzc：
+
+    移除链表中的重复项
+    第一种方法是用 set，很传统的做法
     """
     hashset = set()
     prev = Node()
@@ -18,10 +26,18 @@ def remove_dups(head):
             prev = head
         head = head.next
 
+
 def remove_dups_wothout_set(head):
     """
     Time Complexity: O(N^2)
     Space Complexity: O(1)
+    """
+
+    """
+    williamfzc：
+    
+    这种直接利用链表的特性去跳过元素，但时间复杂度比较高
+    因为链表并不是排好序的，所以每次迭代都需要将其与后续所有元素进行比较
     """
     current = head
     while current:
@@ -33,6 +49,7 @@ def remove_dups_wothout_set(head):
                 runner = runner.next
         current = current.next
 
+
 def print_linked_list(head):
     string = ""
     while head.next:
@@ -40,6 +57,7 @@ def print_linked_list(head):
         head = head.next
     string += head.val
     print(string)
+
 
 # A A B C D C F G
 

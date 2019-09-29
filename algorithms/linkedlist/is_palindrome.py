@@ -1,7 +1,17 @@
+# williamfzc: 回文
 def is_palindrome(head):
     if not head:
         return True
     # split the list to two parts
+    """
+    williamfzc:
+    
+    - 这里快慢指针的含义是为了找到链表的中点
+    - 找到中点之后，将右侧部分翻转
+    - 校对两个列表是否相等
+    
+    这个做法没有消耗额外的空间
+    """
     fast, slow = head.next, head
     while fast and fast.next:
         fast = fast.next.next
@@ -23,6 +33,13 @@ def is_palindrome(head):
         node = node.next
         head = head.next
     return True
+
+
+"""
+williamfzc：
+
+后面两种方法都利用了其他数据结构作为缓存，不难理解
+"""
 
 
 def is_palindrome_stack(head):

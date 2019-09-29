@@ -19,8 +19,11 @@ def reverse_list(head):
     prev = None
     while head:
         current = head
+        # williamfzc: 将head移动到下一位
         head = head.next
+        # williamfzc: 将next指向上一位（反转）
         current.next = prev
+        # williamfzc: 更新 prev（因为head已经往后移动了）
         prev = current
     return prev
 

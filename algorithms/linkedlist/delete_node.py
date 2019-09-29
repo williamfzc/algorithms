@@ -16,6 +16,7 @@ class Node:
 
 
 def delete_node(node):
+    # williamfzc: 下一个节点的的指针与值复制过来
     if node is None or node.next is None:
         raise ValueError
     node.val = node.next.val

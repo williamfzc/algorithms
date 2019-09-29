@@ -11,8 +11,16 @@ it does not need to appear between the left and right partitions.
 We assume the values of all linked list nodes are int and that x in an int.
 """
 
+"""
+williamfzc:
 
-class Node():
+比较直观的做法是维护两个链表，一个比目标值小，一个比目标值大
+最后将两个链表连接起来即可
+
+但这里的方法不是这么做的
+"""
+
+class Node:
     def __init__(self, val=None):
         self.val = int(val)
         self.next = None
