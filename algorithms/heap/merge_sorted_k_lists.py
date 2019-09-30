@@ -1,6 +1,14 @@
 """
 Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
 """
+"""
+williamfzc
+
+合并 k 个有序链表
+
+- 直接将k个链表的头部丢进堆
+- 不断从堆中取出
+"""
 
 
 from heapq import heappop, heapreplace, heapify
@@ -23,6 +31,7 @@ def merge_k_lists(lists):
         if n.next is None:
             heappop(h)  # only change heap size when necessary
         else:
+            # williamfzc: Pop and return the smallest item from the heap, and also push the new item.
             heapreplace(h, (n.next.val, n.next))
         node.next = n
         node = node.next

@@ -6,6 +6,11 @@ If a point p has a smaller distance to the origin than the top element of a heap
 After iterating through all points, our heap contains the k closest points to the origin.
 """
 
+"""
+williamfzc
+
+最小堆的应用
+"""
 
 from heapq import heapify, heappushpop
 

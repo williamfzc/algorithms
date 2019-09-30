@@ -36,6 +36,7 @@ into one in the final output as such: [...[2 3], [4 5], [12 7], ...]
 """
 import heapq
 
+# williamfzc: https://leetcode-cn.com/problems/the-skyline-problem/solution/218tian-ji-xian-wen-ti-sao-miao-xian-fa-by-ivan_al/
 def get_skyline(lrh):
     """
     Wortst Time Complexity: O(NlogN)

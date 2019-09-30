@@ -17,6 +17,13 @@ Window position                Max
  1  3  -1  -3  5 [3  6  7]      7
 Therefore, return the max sliding window as [3,3,5,5,6,7].
 """
+
+"""
+williamfzc
+
+滑动窗口问题 => 用队列来求解
+在处理窗口滑动时，只需要将左边弹出，再从右边添加
+"""
 import collections
 
 
