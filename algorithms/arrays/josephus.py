@@ -9,7 +9,11 @@ Input: consider 123456789 members sitting in a circular fashion,
 Output: 369485271
 """
 
+"""
+williamfzc
 
+约瑟夫环
+"""
 def josephus(int_list, skip):
     skip = skip - 1                     # list starts with 0 index
     idx = 0

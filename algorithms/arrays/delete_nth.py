@@ -8,6 +8,12 @@ which leads to [1,2,3,1,2,3]
 """
 import collections
 
+"""
+williamfzc
+
+核心思想就是用额外的空间来记录出现次数，以降低时间复杂度
+例子用的是dict
+"""
 
 # Time complexity O(n^2)
 def delete_nth_naive(array, n):

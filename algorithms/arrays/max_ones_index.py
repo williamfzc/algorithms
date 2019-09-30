@@ -29,6 +29,8 @@ def max_ones_index(arr):
         # If current element is 0,
         # then calculate the difference
         # between curr and prev_prev_zero
+
+        # williamfzc: 它到前前一个0的距离 -> 替换掉前一个0而得到的距离
         if arr[curr] == 0:
             if curr - prev_prev_zero > max_count:
                 max_count = curr - prev_prev_zero
@@ -37,6 +39,7 @@ def max_ones_index(arr):
             prev_prev_zero = prev_zero
             prev_zero = curr
 
+    # williamfzc: 末尾到前前一个0的距离 -> 替换掉最后一个0的距离
     if n - prev_prev_zero > max_count:
         max_index = prev_zero
 

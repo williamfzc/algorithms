@@ -44,6 +44,7 @@ def garage(initial, final):
             pos = initial.index(car_to_move)         # and where is it?
             initial[zero], initial[pos] = initial[pos], initial[zero]
         else:
+            # williamfzc: 如果 0 已经处于它应该在的位置，那么开始检查当前数组与结果数组的不同，如有不同，交换0与该元素
             for i in range(len(initial)):
                 if initial[i] != final[i]:
                     initial[zero], initial[i] = initial[i], initial[zero]
