@@ -30,6 +30,21 @@ Example:
 (TL:DR) because -9 + 4 = -5
 """
 
+"""
+williamfzc
+
+n 数之和问题。问题解释以basic例子为例：
+
+- n = 4
+- target = 0
+- 意味着我们需要在 nums 列表中挑选四个数 使他们的和为 0
+- 并且需要展示所有可能的组合
+
+在 leetcode 上非常经典的问题
+
+
+"""
+
 
 def n_sum(n, nums, target, **kv):
     """

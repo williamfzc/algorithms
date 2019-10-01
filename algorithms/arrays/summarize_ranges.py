@@ -5,7 +5,11 @@ return the summary of its ranges.
 For example, given [0, 1, 2, 4, 5, 7], return [(0, 2), (4, 5), (7, 7)].
 """
 
+"""
+williamfzc
 
+合并区间
+"""
 def summarize_ranges(array):
     """
     :type array: List[int]

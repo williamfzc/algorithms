@@ -12,7 +12,14 @@ Example:
     return (0, 1)
 """
 
+"""
+williamfzc
 
+leetcode 的第一道题
+
+这里的方法用了 dict 作为缓存（d[值] = 在列表中的位置）
+值得注意，second = target - first，这个也可以用于降维 3SUM 的问题
+"""
 def two_sum(array, target):
     dic = {}
     for i, num in enumerate(array):

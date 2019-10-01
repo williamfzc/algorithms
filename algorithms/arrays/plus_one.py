@@ -6,6 +6,16 @@ The digits are stored big-endian, such that the most significant
 digit is at the head of the list.
 """
 
+"""
+williamfzc
+
+将数字以list形式保存，每一位对应一个数字。实现 +1 的运算。
+核心就是考察对进位的处理：
+
+- 不满足10，加完退出
+- 超过10，取余数，继续找上一位
+- 最后一位如果为0，需要在前面加上1
+"""
 
 def plus_one_v1(digits):
     """

@@ -7,7 +7,14 @@ preserving the order of the other elements.
 The time complexity of the below algorithm is O(n).
 """
 
+"""
+williamfzc
 
+将列表中的 0 移动到 末尾，两种思路：
+
+- 找0，移动到末尾
+- 找非0，移动到头部
+"""
 # False == 0 is True
 def move_zeros(array):
     result = []

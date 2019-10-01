@@ -13,6 +13,13 @@ A solution set is:
   (-1, -1, 2)
 }
 """
+"""
+williamfzc
+
+2sum 升级版...
+
+https://leetcode-cn.com/problems/3sum/solution/3sumpai-xu-shuang-zhi-zhen-yi-dong-by-jyd/
+"""
 
 
 def three_sum(array):
