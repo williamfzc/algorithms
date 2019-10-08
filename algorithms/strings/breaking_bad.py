@@ -35,6 +35,13 @@ def match_symbol(words, symbols):
                 combined.append(re.sub(s, "[{}]".format(s), c))
     return combined
 
+
+"""
+williamfzc
+
+上面的暴力解法就不说了，下面的做法根据题目给出的点做了优化：”如果有多个词匹配，优先取长的。也就是说，一个词只会有一个地方被替换“
+下面的做法按长度给替换词排了序，当替换后就可以直接切换到下一个词
+"""
 def match_symbol_1(words, symbols):
     res = []
     # reversely sort the symbols according to their lengths.

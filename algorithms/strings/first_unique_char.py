@@ -11,6 +11,8 @@ return 2.
 
 Reference: https://leetcode.com/problems/first-unique-character-in-a-string/description/
 """
+
+
 def first_unique_char(s):
     """
     :type s: str
@@ -24,4 +26,4 @@ def first_unique_char(s):
             return i
         else:
             ban.append(s[i])
-    return -1   
+    return -1

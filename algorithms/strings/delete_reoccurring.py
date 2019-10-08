@@ -6,6 +6,7 @@ This is a Google warmup interview question that was asked duirng phone screening
 at my university. 
 """
 
+
 # time complexity O(n)
 def delete_reoccurring_characters(string):
     seen_characters = set()
@@ -15,5 +16,3 @@ def delete_reoccurring_characters(string):
             seen_characters.add(char)
             output_string += char
     return output_string
-
-    
