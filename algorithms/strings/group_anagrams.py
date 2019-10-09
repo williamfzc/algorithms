@@ -11,6 +11,12 @@ Return:
 ]
 """
 
+"""
+williamfzc
+
+当且仅当它们的排序字符串相等时，两个字符串是字母异位词。
+"""
+
 
 def group_anagrams(strs):
     d = {}

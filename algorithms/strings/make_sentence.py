@@ -15,6 +15,14 @@ eg: for given string -> "appletablet"
 count = 0
 
 
+"""
+williamfzc
+
+逐步二分的思路
+
+如果前半部分存在于字典中
+继续递归分析后半部分
+"""
 def make_sentence(str_piece, dictionaries):
     global count
     if len(str_piece) == 0:

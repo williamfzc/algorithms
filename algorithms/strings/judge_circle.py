@@ -13,12 +13,20 @@ Example 2:
 Input: "LL"
 Output: false
 """
+
+"""
+williamfzc
+
+总之就是摊平计数，最后再计算
+"""
+
+
 def judge_circle(moves):
     dict_moves = {
-        'U' : 0,
-        'D' : 0,
-        'R' : 0,
-        'L' : 0
+        'U': 0,
+        'D': 0,
+        'R': 0,
+        'L': 0
     }
     for char in moves:
         dict_moves[char] = dict_moves[char] + 1

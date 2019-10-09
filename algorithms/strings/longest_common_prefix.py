@@ -16,10 +16,21 @@ Reference: https://leetcode.com/problems/longest-common-prefix/description/
 """
 
 """
+williamfzc
+
+python 有两种强大的做法（利用语法）：
+https://leetcode-cn.com/problems/longest-common-prefix/comments/
+
+常规解法则是下面几种，大多就是硬解
+"""
+
+"""
 First solution: Horizontal scanning
 """
+
+
 def common_prefix(s1, s2):
-    "Return prefix common of 2 strings"
+    """ Return prefix common of 2 strings """
     if not s1 or not s2:
         return ""
     k = 0
@@ -29,6 +40,7 @@ def common_prefix(s1, s2):
             return s1[0:k]
     return s1[0:k]
 
+
 def longest_common_prefix_v1(strs):
     if not strs:
         return ""
@@ -37,9 +49,12 @@ def longest_common_prefix_v1(strs):
         result = common_prefix(result, strs[i])
     return result
 
+
 """
 Second solution: Vertical scanning
 """
+
+
 def longest_common_prefix_v2(strs):
     if not strs:
         return ""
@@ -49,13 +64,17 @@ def longest_common_prefix_v2(strs):
                 return strs[0][0:i]
     return strs[0]
 
+
 """
 Third solution: Divide and Conquer
 """
+
+
 def longest_common_prefix_v3(strs):
     if not strs:
         return ""
-    return longest_common(strs, 0, len(strs) -1)
+    return longest_common(strs, 0, len(strs) - 1)
+
 
 def longest_common(strs, left, right):
     if left == right:
